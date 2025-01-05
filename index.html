@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Development Course</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+</head>
+<body>
+    <div class="navbar" style="position: fixed; top: 0; left: 0; width: auto; background: rgba(0, 0, 0, 0.7); z-index: 1000; padding: 10px;">
+        <span style="font-weight: bold; font-size: 2em; margin-right: 20px; font-family: 'Orbitron', sans-serif; text-transform: uppercase;">NEXUS ELITE STUDIOS</span>
+        <a href="#home" class="nav-button">Home</a>
+        <a href="#about" class="nav-button">About</a>
+        <a href="#curriculum" class="nav-button">Curriculum</a>
+        <a href="#contact" class="nav-button">Join Our Program</a>
+    </div>
+    <div id="home" class="hero" style="height: 100vh; display: flex; justify-content: center; align-items: center; padding-top: 60px;">
+        <div style="text-align: center; padding: 20px;">
+            <h1 class="animated-text">Unlock Your Potential: Create Games That Amaze!</h1>
+            <p class="animated-text">Embark on a thrilling adventure to turn your imagination into reality. Our comprehensive course is designed to take you by the hand and guide you through the game development process, from concept to creation. Whether you're a beginner or looking to level up your skills, get ready to unleash your creativity and bring your ideas to life!</p>
+        </div>
+    </div>
+    <div id="about" class="section" style="height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; padding-top: 50px;">
+        <h2 style="margin-bottom: 20px; font-size: 4em;">ABOUT THE COURSE</h2>
+        <p style="max-width: 800px; text-align: center; font-size: 2em;">This course is designed for anyone trying to get into game development in a modern way. With our structured approach, I guarantee that you will be able to create a fully functional game in just three weeks at most! If your game isn't too complex, you might even finish it even sooner!</p>
+    </div>
+    <div id="curriculum" class="section" style="height: 100vh; background: url('curriculum.jpeg') no-repeat center center; background-size: cover; padding: 20px; display: flex; flex-direction: column; align-items: center;">
+        <h2 style="margin-bottom: 50px; text-align: center;">Curriculum</h2>
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; width: 100%; max-width: 1200px;">
+            <p style="flex: 1; max-width: 60%;">Our curriculum offers a unique opportunity for you to dive into the exciting world of game development. You can choose to create stunning 2D games or explore the depths of 3D game design—it's entirely up to you! With hands-on projects and expert guidance, you will gain the skills needed to bring your ideas to life. Don't miss out on this chance to transform your passion into a fully functional game!</p>
+            <div style="flex: 1; text-align: center;">
+                <p style="font-weight: bold; margin-bottom: 10px; font-size: 2em;">Click the image to check out a game made in 3 weeks with no coding experience!</p>
+                <a href="https://driftvortex.vercel.app/" target="_blank">
+                    <img src="Mygame.png" alt="Drift Vortex Game" style="width: 400px; max-width: 100%; border: 2px solid transparent; border-radius: 10px; box-shadow: 0 0 20px rgba(255, 215, 0, 0.8);">
+                </a>
+            </div>
+        </div>
+    </div>
+    <div id="contact" class="section contact-section" style="min-height: 100vh; background: url('submit image.jpeg') no-repeat center center; background-size: cover; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 50px 20px; position: relative;">
+        <h2 style="font-family: 'Orbitron', sans-serif; font-size: 3em; margin-bottom: 40px; text-align: center; color: #fff; text-transform: uppercase;">Join Our Program</h2>
+        
+        <form id="contactForm" class="contact-form" style="width: 100%; max-width: 600px; background: rgba(255, 255, 255, 0.1); padding: 40px; border-radius: 15px; backdrop-filter: blur(10px); box-shadow: 0 0 20px rgba(0, 215, 255, 0.3);">
+            <div class="form-group" style="margin-bottom: 25px;">
+                <label for="name" style="display: block; margin-bottom: 8px; color: #fff; font-family: 'Orbitron', sans-serif;">NAME</label>
+                <input type="text" id="name" name="user_name" autocomplete="name" required style="width: 100%; padding: 12px; background: rgba(255, 255, 255, 0.1); border: 2px solid rgba(0, 215, 255, 0.5); border-radius: 8px; color: #fff; font-size: 16px; transition: all 0.3s ease;">
+            </div>
+            
+            <div class="form-group" style="margin-bottom: 25px;">
+                <label for="age" style="display: block; margin-bottom: 8px; color: #fff; font-family: 'Orbitron', sans-serif;">AGE</label>
+                <input type="number" id="age" name="user_age" autocomplete="off" required min="13" max="100" style="width: 100%; padding: 12px; background: rgba(255, 255, 255, 0.1); border: 2px solid rgba(0, 215, 255, 0.5); border-radius: 8px; color: #fff; font-size: 16px; transition: all 0.3s ease;">
+            </div>
+            
+            <div class="form-group" style="margin-bottom: 25px;">
+                <label for="email" style="display: block; margin-bottom: 8px; color: #fff; font-family: 'Orbitron', sans-serif;">EMAIL</label>
+                <input type="email" id="email" name="user_email" autocomplete="email" required style="width: 100%; padding: 12px; background: rgba(255, 255, 255, 0.1); border: 2px solid rgba(0, 215, 255, 0.5); border-radius: 8px; color: #fff; font-size: 16px; transition: all 0.3s ease;">
+            </div>
+            
+            <div class="form-group" style="margin-bottom: 35px;">
+                <label for="comments" style="display: block; margin-bottom: 8px; color: #fff; font-family: 'Orbitron', sans-serif;">ADDITIONAL COMMENTS (OPTIONAL)</label>
+                <textarea id="comments" name="message" autocomplete="off" rows="4" style="width: 100%; padding: 12px; background: rgba(255, 255, 255, 0.1); border: 2px solid rgba(0, 215, 255, 0.5); border-radius: 8px; color: #fff; font-size: 16px; resize: vertical; transition: all 0.3s ease;"></textarea>
+            </div>
+            
+            <button type="submit" id="submit-btn" style="width: 100%; padding: 15px; background: linear-gradient(45deg, #00d7ff, #0066ff); border: none; border-radius: 8px; color: white; font-size: 18px; font-family: 'Orbitron', sans-serif; cursor: pointer; transition: all 0.3s ease; text-transform: uppercase; font-weight: bold;">Submit Application</button>
+        </form>
+        
+        <div style="position: absolute; right: 20px; bottom: 500px; transform: rotate(-45deg); color: #fff; font-family: 'Orbitron', sans-serif; font-size: 1.5em;">
+            Let's talk prices on April 😊
+        </div>
+    </div>
+
+    <script>
+        (function() {
+            emailjs.init("6uqU4ivTVsTCYd3lJ"); // Your EmailJS User ID
+        })();
+
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            const submitButton = document.getElementById('submit-btn');
+            submitButton.innerHTML = 'Sending...'; // Change button text
+            submitButton.disabled = true; // Disable the button to prevent multiple submissions
+
+            emailjs.sendForm('service_27bsoln', 'template_j2h4b1e', this)
+                .then(function(response) {
+                    alert('Your message has been sent successfully!');
+                    document.getElementById('contactForm').reset(); // Reset form after successful submission
+                })
+                .catch(function(error) {
+                    alert('Failed to send your message. Please try again later.');
+                    console.error('Error:', error);
+                })
+                .finally(function() {
+                    submitButton.innerHTML = 'Submit Application'; // Reset button text
+                    submitButton.disabled = false; // Re-enable the button
+                });
+        });
+    </script>
+
+    <style>
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #00d7ff;
+            box-shadow: 0 0 15px rgba(0, 215, 255, 0.3);
+        }
+
+        button[type="submit"]:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 215, 255, 0.4);
+        }
+
+        @keyframes formFadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .contact-form {
+            animation: formFadeIn 0.8s ease-out;
+        }
+    </style>
+</body>
+</html>

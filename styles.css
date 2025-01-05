@@ -1,0 +1,144 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body { 
+    font-family: 'Arial', sans-serif; 
+    margin: 0; 
+    padding: 0; 
+    color: white; 
+    background: transparent;
+}
+
+.navbar { 
+    position: fixed; 
+    top: 0; 
+    right: 0; 
+    width: auto; 
+    background: transparent; 
+    z-index: 1000; 
+    padding: 10px;
+}
+.navbar a { text-decoration: none; color: white; margin-left: 20px; }
+
+.nav-button {
+    background-color: rgba(97, 218, 251, 0.8);
+    color: black;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    font-family: 'Verdana', sans-serif; 
+    margin: 0 10px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.nav-button:hover {
+    background-color: rgba(255, 215, 0, 0.8);
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.nav-button:active {
+    transform: scale(0.95);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+#home {
+    height: 100vh;
+    background: url('Home.jpeg') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#home h1 {
+    font-size: 3em;
+}
+#home p {
+    font-size: 2em;
+}
+
+#about {
+    height: 100vh;
+    background: url('About.jpeg') no-repeat center center;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+}
+
+#about h2 {
+    font-size: 2em;
+    font-weight: bold;
+    color: #FFD700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    margin-top: 20px;
+    text-align: center;
+}
+
+#about p {
+    font-size: 1.2em;
+    line-height: 1.4;
+    color: #FFFFFF;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+    text-align: center;
+    padding: 0 20px;
+    max-width: 800px;
+}
+
+#curriculum {
+    height: 100vh;
+    background: url('curriculum.jpeg') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#curriculum h2 {
+    font-size: 4em;
+    font-weight: bold;
+    color: #FFD700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+#curriculum p {
+    font-size: 2em;
+    line-height: 1.4;
+    color: #FFFAFA;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    padding: 0 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+@keyframes colorChange {
+    0% { color: #ffcc00; }
+    10% { color: #ff5733; }
+    20% { color: #ff33a1; }
+    30% { color: #33ff57; }
+    40% { color: #33ffcc; }
+    50% { color: #3357ff; }
+    60% { color: #a133ff; }
+    70% { color: #ff33f6; }
+    80% { color: #ffcc00; }
+    90% { color: #ff5733; }
+    100% { color: #ffcc00; }
+}
+
+.animated-text {
+    animation: colorChange 30s infinite;
+}
