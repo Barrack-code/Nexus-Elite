@@ -9,10 +9,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap" rel="stylesheet">
     <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+    <link rel="icon" href="Logo-fz-0Eou8Q-transformed.jpeg" type="image/jpeg">
 </head>
 <body>
     <div class="navbar" style="position: fixed; top: 0; left: 0; width: auto; background: rgba(0, 0, 0, 0.7); z-index: 1000; padding: 10px;">
-        <span style="font-weight: bold; font-size: 2em; margin-right: 20px; font-family: 'Orbitron', sans-serif; text-transform: uppercase;">NEXUS ELITE STUDIOS</span>
+        <span style="font-weight: bold; font-size: 2em; margin-right: 20px; font-family: 'Orbitron', sans-serif; text-transform: uppercase;">
+            <img src="Logo-fz-0Eou8Q-transformed.jpeg" alt="Nexus Elite Logo" style="width: 100px; height: auto;"> Nexus Elite
+        </span>
         <a href="#home" class="nav-button">Home</a>
         <a href="#about" class="nav-button">About</a>
         <a href="#curriculum" class="nav-button">Curriculum</a>
@@ -72,10 +75,31 @@
         </div>
     </div>
 
+    <div id="audio-controls" style="position: fixed; bottom: 20px; right: 20px; z-index: 1000; cursor: pointer;">
+        <button id="playButton" style="background: red; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">Play Music</button>
+    </div>
+    <audio id="background-music" loop style="display: none;">
+        <source src="peaceful-relaxing-piano-music-271857.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
     <script>
         (function() {
             emailjs.init("6uqU4ivTVsTCYd3lJ"); // Your EmailJS User ID
         })();
+        
+        const audio = document.getElementById('background-music');
+        const playButton = document.getElementById('playButton');
+        
+        playButton.addEventListener('click', () => {
+            if (audio.paused) {
+                audio.play();
+                playButton.textContent = 'Pause Music'; // Change button text to Pause
+            } else {
+                audio.pause();
+                playButton.textContent = 'Play Music'; // Change button text to Play
+            }
+        });
 
         document.getElementById('contactForm').addEventListener('submit', function(event) {
             event.preventDefault(); // Prevent the default form submission
